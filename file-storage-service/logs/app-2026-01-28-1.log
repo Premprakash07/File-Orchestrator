@@ -1,0 +1,315 @@
+2026-01-28 16:33:56.128 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-01-28 16:33:56.197 [restartedMain] INFO  com.filestorage.FileStorageApplication - Starting FileStorageApplication using Java 19.0.2 with PID 28268 (C:\Projects\theUploader\file-storage-backend\target\classes started by e5717722 in C:\Projects\theUploader\file-storage-backend)
+2026-01-28 16:33:56.203 [restartedMain] DEBUG com.filestorage.FileStorageApplication - Running with Spring Boot v3.2.1, Spring v6.1.2
+2026-01-28 16:33:56.204 [restartedMain] INFO  com.filestorage.FileStorageApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 16:33:56.282 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-28 16:33:56.284 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-28 16:33:57.623 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 16:33:57.729 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 95 ms. Found 3 JPA repository interfaces.
+2026-01-28 16:33:58.912 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 16:33:58.930 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-28 16:33:58.932 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 16:33:58.933 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2026-01-28 16:33:59.041 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-01-28 16:33:59.046 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2755 ms
+2026-01-28 16:33:59.113 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-28 16:33:59.521 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/filestorage user=ADMIN
+2026-01-28 16:33:59.523 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-28 16:33:59.537 [restartedMain] INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/filestorage'
+2026-01-28 16:33:59.756 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 16:33:59.877 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-01-28 16:33:59.938 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-01-28 16:34:00.318 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 16:34:00.396 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-28 16:34:01.838 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 16:34:01.920 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 16:34:02.488 [restartedMain] DEBUG com.filestorage.security.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-01-28 16:34:02.760 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 16:34:03.331 [restartedMain] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7b134ea5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50a04619, org.springframework.security.web.context.SecurityContextHolderFilter@4f623acb, org.springframework.security.web.header.HeaderWriterFilter@502b1c3e, org.springframework.web.filter.CorsFilter@407c5905, org.springframework.security.web.authentication.logout.LogoutFilter@55dd0e20, com.filestorage.security.JwtAuthenticationFilter@64b92cd4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5efda50f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3394f5c5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79af6dbb, org.springframework.security.web.session.SessionManagementFilter@7ea9ea36, org.springframework.security.web.access.ExceptionTranslationFilter@73d25092, org.springframework.security.web.access.intercept.AuthorizationFilter@3ba20751]
+2026-01-28 16:34:03.763 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-01-28 16:34:03.782 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-28 16:34:03.829 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-01-28 16:34:03.844 [restartedMain] INFO  com.filestorage.FileStorageApplication - Started FileStorageApplication in 8.378 seconds (process running for 11.489)
+2026-01-28 16:35:17.430 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-28 16:35:17.431 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-28 16:35:17.433 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-01-28 16:35:17.588 [http-nio-8080-exec-2] ERROR com.filestorage.security.JwtTokenProvider - Invalid JWT token: Token expired
+2026-01-28 16:35:17.766 [http-nio-8080-exec-2] INFO  com.filestorage.controller.AuthController - Login attempt for user: userid1
+2026-01-28 16:35:17.906 [http-nio-8080-exec-2] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:35:18.211 [http-nio-8080-exec-2] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:35:18.343 [http-nio-8080-exec-2] DEBUG com.filestorage.security.JwtTokenProvider - Generating JWT token for user: userid1
+2026-01-28 16:35:18.376 [http-nio-8080-exec-2] DEBUG com.filestorage.security.JwtTokenProvider - JWT token generated successfully for user: userid1
+2026-01-28 16:35:18.380 [http-nio-8080-exec-2] INFO  com.filestorage.controller.AuthController - User userid1 logged in successfully
+2026-01-28 16:35:18.456 [http-nio-8080-exec-5] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:35:18.456 [http-nio-8080-exec-6] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:35:18.461 [http-nio-8080-exec-6] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:35:18.461 [http-nio-8080-exec-5] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:35:18.461 [http-nio-8080-exec-6] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:35:18.462 [http-nio-8080-exec-5] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:35:18.516 [http-nio-8080-exec-6] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:35:18.517 [http-nio-8080-exec-6] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:35:18.517 [http-nio-8080-exec-5] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:35:18.518 [http-nio-8080-exec-5] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:35:18.523 [http-nio-8080-exec-6] DEBUG com.filestorage.controller.FileController - Fetching files for user: userid1 in folder: null
+2026-01-28 16:35:18.523 [http-nio-8080-exec-5] DEBUG com.filestorage.controller.FolderController - Fetching folders for user: userid1 in parent folder: null
+2026-01-28 16:35:18.527 [http-nio-8080-exec-6] DEBUG com.filestorage.service.FileStorageService - Fetching files for user ID: 1 in folder ID: null
+2026-01-28 16:35:18.527 [http-nio-8080-exec-5] DEBUG com.filestorage.service.FolderService - Fetching folders for user ID: 1 with parent folder ID: null
+2026-01-28 16:35:18.544 [http-nio-8080-exec-5] DEBUG com.filestorage.service.FolderService - Found 1 folders for user ID: 1
+2026-01-28 16:35:18.544 [http-nio-8080-exec-6] DEBUG com.filestorage.service.FileStorageService - Found 2 files for user ID: 1
+2026-01-28 16:35:18.545 [http-nio-8080-exec-5] DEBUG com.filestorage.controller.FolderController - Retrieved 1 folders for user: userid1
+2026-01-28 16:35:18.545 [http-nio-8080-exec-6] DEBUG com.filestorage.controller.FileController - Retrieved 2 files for user: userid1
+2026-01-28 16:35:20.906 [http-nio-8080-exec-1] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:35:20.906 [http-nio-8080-exec-2] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:35:20.911 [http-nio-8080-exec-1] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:35:20.911 [http-nio-8080-exec-2] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:35:20.911 [http-nio-8080-exec-1] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:35:20.911 [http-nio-8080-exec-2] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:35:20.914 [http-nio-8080-exec-2] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:35:20.914 [http-nio-8080-exec-1] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:35:20.915 [http-nio-8080-exec-2] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:35:20.915 [http-nio-8080-exec-1] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:35:20.917 [http-nio-8080-exec-2] DEBUG com.filestorage.controller.FileController - Fetching files for user: userid1 in folder: 1
+2026-01-28 16:35:20.918 [http-nio-8080-exec-1] DEBUG com.filestorage.controller.FolderController - Fetching folders for user: userid1 in parent folder: 1
+2026-01-28 16:35:20.920 [http-nio-8080-exec-2] DEBUG com.filestorage.service.FileStorageService - Fetching files for user ID: 1 in folder ID: 1
+2026-01-28 16:35:20.920 [http-nio-8080-exec-1] DEBUG com.filestorage.service.FolderService - Fetching folders for user ID: 1 with parent folder ID: 1
+2026-01-28 16:35:20.928 [http-nio-8080-exec-1] DEBUG com.filestorage.service.FolderService - Found 1 folders for user ID: 1
+2026-01-28 16:35:20.928 [http-nio-8080-exec-2] DEBUG com.filestorage.service.FileStorageService - Found 2 files for user ID: 1
+2026-01-28 16:35:20.928 [http-nio-8080-exec-1] DEBUG com.filestorage.controller.FolderController - Retrieved 1 folders for user: userid1
+2026-01-28 16:35:20.928 [http-nio-8080-exec-2] DEBUG com.filestorage.controller.FileController - Retrieved 2 files for user: userid1
+2026-01-28 16:35:23.320 [http-nio-8080-exec-3] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:35:23.320 [http-nio-8080-exec-4] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:35:23.323 [http-nio-8080-exec-4] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:35:23.323 [http-nio-8080-exec-3] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:35:23.323 [http-nio-8080-exec-4] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:35:23.323 [http-nio-8080-exec-3] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:35:23.325 [http-nio-8080-exec-4] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:35:23.325 [http-nio-8080-exec-3] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:35:23.326 [http-nio-8080-exec-4] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:35:23.326 [http-nio-8080-exec-3] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:35:23.327 [http-nio-8080-exec-3] DEBUG com.filestorage.controller.FolderController - Fetching folders for user: userid1 in parent folder: null
+2026-01-28 16:35:23.327 [http-nio-8080-exec-4] DEBUG com.filestorage.controller.FileController - Fetching files for user: userid1 in folder: null
+2026-01-28 16:35:23.330 [http-nio-8080-exec-3] DEBUG com.filestorage.service.FolderService - Fetching folders for user ID: 1 with parent folder ID: null
+2026-01-28 16:35:23.331 [http-nio-8080-exec-4] DEBUG com.filestorage.service.FileStorageService - Fetching files for user ID: 1 in folder ID: null
+2026-01-28 16:35:23.333 [http-nio-8080-exec-3] DEBUG com.filestorage.service.FolderService - Found 1 folders for user ID: 1
+2026-01-28 16:35:23.333 [http-nio-8080-exec-4] DEBUG com.filestorage.service.FileStorageService - Found 2 files for user ID: 1
+2026-01-28 16:35:23.334 [http-nio-8080-exec-3] DEBUG com.filestorage.controller.FolderController - Retrieved 1 folders for user: userid1
+2026-01-28 16:35:23.334 [http-nio-8080-exec-4] DEBUG com.filestorage.controller.FileController - Retrieved 2 files for user: userid1
+2026-01-28 16:35:24.831 [http-nio-8080-exec-5] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:35:24.831 [http-nio-8080-exec-6] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:35:24.834 [http-nio-8080-exec-6] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:35:24.834 [http-nio-8080-exec-5] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:35:24.834 [http-nio-8080-exec-6] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:35:24.834 [http-nio-8080-exec-5] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:35:24.836 [http-nio-8080-exec-5] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:35:24.836 [http-nio-8080-exec-6] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:35:24.836 [http-nio-8080-exec-5] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:35:24.836 [http-nio-8080-exec-6] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:35:24.837 [http-nio-8080-exec-6] DEBUG com.filestorage.controller.FolderController - Fetching folders for user: userid1 in parent folder: 1
+2026-01-28 16:35:24.838 [http-nio-8080-exec-5] DEBUG com.filestorage.controller.FileController - Fetching files for user: userid1 in folder: 1
+2026-01-28 16:35:24.839 [http-nio-8080-exec-6] DEBUG com.filestorage.service.FolderService - Fetching folders for user ID: 1 with parent folder ID: 1
+2026-01-28 16:35:24.840 [http-nio-8080-exec-5] DEBUG com.filestorage.service.FileStorageService - Fetching files for user ID: 1 in folder ID: 1
+2026-01-28 16:35:24.844 [http-nio-8080-exec-6] DEBUG com.filestorage.service.FolderService - Found 1 folders for user ID: 1
+2026-01-28 16:35:24.844 [http-nio-8080-exec-5] DEBUG com.filestorage.service.FileStorageService - Found 2 files for user ID: 1
+2026-01-28 16:35:24.844 [http-nio-8080-exec-6] DEBUG com.filestorage.controller.FolderController - Retrieved 1 folders for user: userid1
+2026-01-28 16:35:24.844 [http-nio-8080-exec-5] DEBUG com.filestorage.controller.FileController - Retrieved 2 files for user: userid1
+2026-01-28 16:35:26.336 [http-nio-8080-exec-10] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:35:26.336 [http-nio-8080-exec-9] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:35:26.338 [http-nio-8080-exec-10] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:35:26.338 [http-nio-8080-exec-10] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:35:26.338 [http-nio-8080-exec-9] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:35:26.339 [http-nio-8080-exec-9] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:35:26.340 [http-nio-8080-exec-10] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:35:26.340 [http-nio-8080-exec-10] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:35:26.340 [http-nio-8080-exec-9] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:35:26.340 [http-nio-8080-exec-9] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:35:26.341 [http-nio-8080-exec-10] DEBUG com.filestorage.controller.FolderController - Fetching folders for user: userid1 in parent folder: 5
+2026-01-28 16:35:26.341 [http-nio-8080-exec-9] DEBUG com.filestorage.controller.FileController - Fetching files for user: userid1 in folder: 5
+2026-01-28 16:35:26.342 [http-nio-8080-exec-10] DEBUG com.filestorage.service.FolderService - Fetching folders for user ID: 1 with parent folder ID: 5
+2026-01-28 16:35:26.343 [http-nio-8080-exec-9] DEBUG com.filestorage.service.FileStorageService - Fetching files for user ID: 1 in folder ID: 5
+2026-01-28 16:35:26.355 [http-nio-8080-exec-10] DEBUG com.filestorage.service.FolderService - Found 0 folders for user ID: 1
+2026-01-28 16:35:26.355 [http-nio-8080-exec-9] DEBUG com.filestorage.service.FileStorageService - Found 0 files for user ID: 1
+2026-01-28 16:35:26.356 [http-nio-8080-exec-10] DEBUG com.filestorage.controller.FolderController - Retrieved 0 folders for user: userid1
+2026-01-28 16:35:26.356 [http-nio-8080-exec-9] DEBUG com.filestorage.controller.FileController - Retrieved 0 files for user: userid1
+2026-01-28 16:35:27.632 [http-nio-8080-exec-3] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:35:27.632 [http-nio-8080-exec-4] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:35:27.634 [http-nio-8080-exec-3] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:35:27.634 [http-nio-8080-exec-3] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:35:27.635 [http-nio-8080-exec-4] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:35:27.635 [http-nio-8080-exec-4] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:35:27.637 [http-nio-8080-exec-3] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:35:27.637 [http-nio-8080-exec-4] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:35:27.638 [http-nio-8080-exec-3] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:35:27.638 [http-nio-8080-exec-4] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:35:27.639 [http-nio-8080-exec-3] DEBUG com.filestorage.controller.FileController - Fetching files for user: userid1 in folder: 1
+2026-01-28 16:35:27.639 [http-nio-8080-exec-4] DEBUG com.filestorage.controller.FolderController - Fetching folders for user: userid1 in parent folder: 1
+2026-01-28 16:35:27.641 [http-nio-8080-exec-3] DEBUG com.filestorage.service.FileStorageService - Fetching files for user ID: 1 in folder ID: 1
+2026-01-28 16:35:27.641 [http-nio-8080-exec-4] DEBUG com.filestorage.service.FolderService - Fetching folders for user ID: 1 with parent folder ID: 1
+2026-01-28 16:35:27.645 [http-nio-8080-exec-4] DEBUG com.filestorage.service.FolderService - Found 1 folders for user ID: 1
+2026-01-28 16:35:27.646 [http-nio-8080-exec-4] DEBUG com.filestorage.controller.FolderController - Retrieved 1 folders for user: userid1
+2026-01-28 16:35:27.646 [http-nio-8080-exec-3] DEBUG com.filestorage.service.FileStorageService - Found 2 files for user ID: 1
+2026-01-28 16:35:27.646 [http-nio-8080-exec-3] DEBUG com.filestorage.controller.FileController - Retrieved 2 files for user: userid1
+2026-01-28 16:35:28.921 [http-nio-8080-exec-7] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:35:28.921 [http-nio-8080-exec-8] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:35:28.923 [http-nio-8080-exec-8] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:35:28.923 [http-nio-8080-exec-7] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:35:28.923 [http-nio-8080-exec-8] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:35:28.923 [http-nio-8080-exec-7] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:35:28.926 [http-nio-8080-exec-7] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:35:28.926 [http-nio-8080-exec-8] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:35:28.926 [http-nio-8080-exec-7] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:35:28.926 [http-nio-8080-exec-8] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:35:28.927 [http-nio-8080-exec-8] DEBUG com.filestorage.controller.FileController - Fetching files for user: userid1 in folder: null
+2026-01-28 16:35:28.927 [http-nio-8080-exec-7] DEBUG com.filestorage.controller.FolderController - Fetching folders for user: userid1 in parent folder: null
+2026-01-28 16:35:28.929 [http-nio-8080-exec-8] DEBUG com.filestorage.service.FileStorageService - Fetching files for user ID: 1 in folder ID: null
+2026-01-28 16:35:28.930 [http-nio-8080-exec-7] DEBUG com.filestorage.service.FolderService - Fetching folders for user ID: 1 with parent folder ID: null
+2026-01-28 16:35:28.931 [http-nio-8080-exec-7] DEBUG com.filestorage.service.FolderService - Found 1 folders for user ID: 1
+2026-01-28 16:35:28.931 [http-nio-8080-exec-8] DEBUG com.filestorage.service.FileStorageService - Found 2 files for user ID: 1
+2026-01-28 16:35:28.931 [http-nio-8080-exec-7] DEBUG com.filestorage.controller.FolderController - Retrieved 1 folders for user: userid1
+2026-01-28 16:35:28.931 [http-nio-8080-exec-8] DEBUG com.filestorage.controller.FileController - Retrieved 2 files for user: userid1
+2026-01-28 16:36:14.449 [http-nio-8080-exec-4] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:36:14.455 [http-nio-8080-exec-3] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:36:14.461 [http-nio-8080-exec-4] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:36:14.462 [http-nio-8080-exec-4] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:36:14.464 [http-nio-8080-exec-4] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:36:14.464 [http-nio-8080-exec-3] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:36:14.472 [http-nio-8080-exec-3] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:36:14.480 [http-nio-8080-exec-3] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:36:14.480 [http-nio-8080-exec-3] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:36:14.483 [http-nio-8080-exec-3] DEBUG com.filestorage.controller.FolderController - Fetching folders for user: userid1 in parent folder: null
+2026-01-28 16:36:14.486 [http-nio-8080-exec-3] DEBUG com.filestorage.service.FolderService - Fetching folders for user ID: 1 with parent folder ID: null
+2026-01-28 16:36:14.464 [http-nio-8080-exec-4] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:36:14.490 [http-nio-8080-exec-3] DEBUG com.filestorage.service.FolderService - Found 1 folders for user ID: 1
+2026-01-28 16:36:14.492 [http-nio-8080-exec-3] DEBUG com.filestorage.controller.FolderController - Retrieved 1 folders for user: userid1
+2026-01-28 16:36:14.491 [http-nio-8080-exec-4] DEBUG com.filestorage.controller.FileController - Fetching files for user: userid1 in folder: null
+2026-01-28 16:36:14.505 [http-nio-8080-exec-4] DEBUG com.filestorage.service.FileStorageService - Fetching files for user ID: 1 in folder ID: null
+2026-01-28 16:36:14.509 [http-nio-8080-exec-4] DEBUG com.filestorage.service.FileStorageService - Found 2 files for user ID: 1
+2026-01-28 16:36:14.509 [http-nio-8080-exec-4] DEBUG com.filestorage.controller.FileController - Retrieved 2 files for user: userid1
+2026-01-28 16:36:46.162 [http-nio-8080-exec-7] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:36:46.164 [http-nio-8080-exec-7] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:36:46.164 [http-nio-8080-exec-7] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:36:46.167 [http-nio-8080-exec-7] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:36:46.167 [http-nio-8080-exec-7] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:36:46.286 [http-nio-8080-exec-7] INFO  com.filestorage.controller.FileController - File upload requested: 1000025035.jpg (size: 2182902 bytes) by user: userid1 with options - AI Summarize: true, Extract Metadata: false, Generate Thumbnail: false, Tags: null
+2026-01-28 16:36:46.290 [http-nio-8080-exec-7] DEBUG com.filestorage.service.FileStorageService - Storing file: 1000025035.jpg for user ID: 1 in folder ID: null
+2026-01-28 16:36:46.298 [http-nio-8080-exec-7] DEBUG com.filestorage.service.FileStorageService - User storage path created/verified: .\uploads\1
+2026-01-28 16:36:46.316 [http-nio-8080-exec-7] DEBUG com.filestorage.service.FileStorageService - File copied to: .\uploads\1\dbde3adf-5a64-4ce9-a24d-01b64af84c40_1000025035.jpg
+2026-01-28 16:36:46.429 [http-nio-8080-exec-7] INFO  com.filestorage.service.FileStorageService - File stored successfully: 1000025035.jpg with metadata ID: 13
+2026-01-28 16:36:46.431 [http-nio-8080-exec-7] INFO  com.filestorage.controller.FileController - File uploaded successfully: 1000025035.jpg with ID: 13
+2026-01-28 16:36:46.451 [http-nio-8080-exec-10] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:36:46.451 [http-nio-8080-exec-1] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:36:46.453 [http-nio-8080-exec-10] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:36:46.453 [http-nio-8080-exec-1] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:36:46.453 [http-nio-8080-exec-10] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:36:46.453 [http-nio-8080-exec-1] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:36:46.456 [http-nio-8080-exec-10] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:36:46.456 [http-nio-8080-exec-1] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:36:46.457 [http-nio-8080-exec-10] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:36:46.457 [http-nio-8080-exec-1] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:36:46.458 [http-nio-8080-exec-10] DEBUG com.filestorage.controller.FileController - Fetching files for user: userid1 in folder: null
+2026-01-28 16:36:46.458 [http-nio-8080-exec-1] DEBUG com.filestorage.controller.FolderController - Fetching folders for user: userid1 in parent folder: null
+2026-01-28 16:36:46.460 [http-nio-8080-exec-1] DEBUG com.filestorage.service.FolderService - Fetching folders for user ID: 1 with parent folder ID: null
+2026-01-28 16:36:46.460 [http-nio-8080-exec-10] DEBUG com.filestorage.service.FileStorageService - Fetching files for user ID: 1 in folder ID: null
+2026-01-28 16:36:46.464 [http-nio-8080-exec-1] DEBUG com.filestorage.service.FolderService - Found 1 folders for user ID: 1
+2026-01-28 16:36:46.464 [http-nio-8080-exec-1] DEBUG com.filestorage.controller.FolderController - Retrieved 1 folders for user: userid1
+2026-01-28 16:36:46.464 [http-nio-8080-exec-10] DEBUG com.filestorage.service.FileStorageService - Found 3 files for user ID: 1
+2026-01-28 16:36:46.465 [http-nio-8080-exec-10] DEBUG com.filestorage.controller.FileController - Retrieved 3 files for user: userid1
+2026-01-28 16:36:53.591 [http-nio-8080-exec-6] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:36:53.593 [http-nio-8080-exec-6] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:36:53.593 [http-nio-8080-exec-6] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:36:53.595 [http-nio-8080-exec-6] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:36:53.595 [http-nio-8080-exec-6] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:36:53.596 [http-nio-8080-exec-6] INFO  com.filestorage.controller.FileController - File deletion requested: ID 13 by user: userid1
+2026-01-28 16:36:53.598 [http-nio-8080-exec-6] INFO  com.filestorage.service.FileStorageService - Deleting file: ID 13 for user ID: 1
+2026-01-28 16:36:53.603 [http-nio-8080-exec-6] DEBUG com.filestorage.service.FileStorageService - Physical file deleted: .\uploads\1\dbde3adf-5a64-4ce9-a24d-01b64af84c40_1000025035.jpg
+2026-01-28 16:36:53.624 [http-nio-8080-exec-6] INFO  com.filestorage.service.FileStorageService - File metadata deleted successfully: ID 13
+2026-01-28 16:36:53.624 [http-nio-8080-exec-6] INFO  com.filestorage.controller.FileController - File deleted successfully: ID 13
+2026-01-28 16:36:58.138 [http-nio-8080-exec-7] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:36:58.138 [http-nio-8080-exec-9] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:36:58.140 [http-nio-8080-exec-7] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:36:58.140 [http-nio-8080-exec-9] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:36:58.140 [http-nio-8080-exec-7] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:36:58.140 [http-nio-8080-exec-9] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:36:58.143 [http-nio-8080-exec-7] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:36:58.143 [http-nio-8080-exec-9] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:36:58.143 [http-nio-8080-exec-7] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:36:58.143 [http-nio-8080-exec-9] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:36:58.145 [http-nio-8080-exec-9] DEBUG com.filestorage.controller.FolderController - Fetching folders for user: userid1 in parent folder: null
+2026-01-28 16:36:58.145 [http-nio-8080-exec-7] DEBUG com.filestorage.controller.FileController - Fetching files for user: userid1 in folder: null
+2026-01-28 16:36:58.147 [http-nio-8080-exec-9] DEBUG com.filestorage.service.FolderService - Fetching folders for user ID: 1 with parent folder ID: null
+2026-01-28 16:36:58.147 [http-nio-8080-exec-7] DEBUG com.filestorage.service.FileStorageService - Fetching files for user ID: 1 in folder ID: null
+2026-01-28 16:36:58.149 [http-nio-8080-exec-9] DEBUG com.filestorage.service.FolderService - Found 1 folders for user ID: 1
+2026-01-28 16:36:58.149 [http-nio-8080-exec-7] DEBUG com.filestorage.service.FileStorageService - Found 2 files for user ID: 1
+2026-01-28 16:36:58.149 [http-nio-8080-exec-9] DEBUG com.filestorage.controller.FolderController - Retrieved 1 folders for user: userid1
+2026-01-28 16:36:58.150 [http-nio-8080-exec-7] DEBUG com.filestorage.controller.FileController - Retrieved 2 files for user: userid1
+2026-01-28 16:36:58.947 [http-nio-8080-exec-3] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:36:58.947 [http-nio-8080-exec-2] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:36:58.950 [http-nio-8080-exec-2] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:36:58.950 [http-nio-8080-exec-3] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:36:58.950 [http-nio-8080-exec-2] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:36:58.951 [http-nio-8080-exec-3] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:36:58.953 [http-nio-8080-exec-2] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:36:58.953 [http-nio-8080-exec-3] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:36:58.954 [http-nio-8080-exec-2] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:36:58.954 [http-nio-8080-exec-3] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:36:58.955 [http-nio-8080-exec-2] DEBUG com.filestorage.controller.FolderController - Fetching folders for user: userid1 in parent folder: 1
+2026-01-28 16:36:58.955 [http-nio-8080-exec-3] DEBUG com.filestorage.controller.FileController - Fetching files for user: userid1 in folder: 1
+2026-01-28 16:36:58.957 [http-nio-8080-exec-2] DEBUG com.filestorage.service.FolderService - Fetching folders for user ID: 1 with parent folder ID: 1
+2026-01-28 16:36:58.957 [http-nio-8080-exec-3] DEBUG com.filestorage.service.FileStorageService - Fetching files for user ID: 1 in folder ID: 1
+2026-01-28 16:36:58.964 [http-nio-8080-exec-3] DEBUG com.filestorage.service.FileStorageService - Found 2 files for user ID: 1
+2026-01-28 16:36:58.964 [http-nio-8080-exec-2] DEBUG com.filestorage.service.FolderService - Found 1 folders for user ID: 1
+2026-01-28 16:36:58.964 [http-nio-8080-exec-2] DEBUG com.filestorage.controller.FolderController - Retrieved 1 folders for user: userid1
+2026-01-28 16:36:58.964 [http-nio-8080-exec-3] DEBUG com.filestorage.controller.FileController - Retrieved 2 files for user: userid1
+2026-01-28 16:37:00.085 [http-nio-8080-exec-9] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:37:00.085 [http-nio-8080-exec-7] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:37:00.087 [http-nio-8080-exec-9] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:37:00.087 [http-nio-8080-exec-9] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:37:00.087 [http-nio-8080-exec-7] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:37:00.087 [http-nio-8080-exec-7] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:37:00.089 [http-nio-8080-exec-9] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:37:00.089 [http-nio-8080-exec-9] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:37:00.089 [http-nio-8080-exec-7] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:37:00.089 [http-nio-8080-exec-7] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:37:00.090 [http-nio-8080-exec-9] DEBUG com.filestorage.controller.FolderController - Fetching folders for user: userid1 in parent folder: 5
+2026-01-28 16:37:00.090 [http-nio-8080-exec-7] DEBUG com.filestorage.controller.FileController - Fetching files for user: userid1 in folder: 5
+2026-01-28 16:37:00.091 [http-nio-8080-exec-9] DEBUG com.filestorage.service.FolderService - Fetching folders for user ID: 1 with parent folder ID: 5
+2026-01-28 16:37:00.092 [http-nio-8080-exec-7] DEBUG com.filestorage.service.FileStorageService - Fetching files for user ID: 1 in folder ID: 5
+2026-01-28 16:37:00.094 [http-nio-8080-exec-9] DEBUG com.filestorage.service.FolderService - Found 0 folders for user ID: 1
+2026-01-28 16:37:00.094 [http-nio-8080-exec-9] DEBUG com.filestorage.controller.FolderController - Retrieved 0 folders for user: userid1
+2026-01-28 16:37:00.094 [http-nio-8080-exec-7] DEBUG com.filestorage.service.FileStorageService - Found 0 files for user ID: 1
+2026-01-28 16:37:00.095 [http-nio-8080-exec-7] DEBUG com.filestorage.controller.FileController - Retrieved 0 files for user: userid1
+2026-01-28 16:37:01.962 [http-nio-8080-exec-10] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:37:01.962 [http-nio-8080-exec-1] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:37:01.964 [http-nio-8080-exec-1] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:37:01.964 [http-nio-8080-exec-10] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:37:01.964 [http-nio-8080-exec-1] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:37:01.964 [http-nio-8080-exec-10] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:37:01.967 [http-nio-8080-exec-1] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:37:01.967 [http-nio-8080-exec-10] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:37:01.967 [http-nio-8080-exec-1] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:37:01.967 [http-nio-8080-exec-10] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:37:01.969 [http-nio-8080-exec-1] DEBUG com.filestorage.controller.FileController - Fetching files for user: userid1 in folder: 1
+2026-01-28 16:37:01.969 [http-nio-8080-exec-10] DEBUG com.filestorage.controller.FolderController - Fetching folders for user: userid1 in parent folder: 1
+2026-01-28 16:37:01.971 [http-nio-8080-exec-10] DEBUG com.filestorage.service.FolderService - Fetching folders for user ID: 1 with parent folder ID: 1
+2026-01-28 16:37:01.971 [http-nio-8080-exec-1] DEBUG com.filestorage.service.FileStorageService - Fetching files for user ID: 1 in folder ID: 1
+2026-01-28 16:37:01.975 [http-nio-8080-exec-10] DEBUG com.filestorage.service.FolderService - Found 1 folders for user ID: 1
+2026-01-28 16:37:01.975 [http-nio-8080-exec-1] DEBUG com.filestorage.service.FileStorageService - Found 2 files for user ID: 1
+2026-01-28 16:37:01.975 [http-nio-8080-exec-10] DEBUG com.filestorage.controller.FolderController - Retrieved 1 folders for user: userid1
+2026-01-28 16:37:01.975 [http-nio-8080-exec-1] DEBUG com.filestorage.controller.FileController - Retrieved 2 files for user: userid1
+2026-01-28 16:37:03.230 [http-nio-8080-exec-4] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:37:03.230 [http-nio-8080-exec-6] DEBUG com.filestorage.security.JwtTokenProvider - JWT token validated successfully
+2026-01-28 16:37:03.232 [http-nio-8080-exec-4] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:37:03.232 [http-nio-8080-exec-6] DEBUG com.filestorage.security.JwtAuthenticationFilter - JWT token validated for user: userid1
+2026-01-28 16:37:03.233 [http-nio-8080-exec-4] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:37:03.233 [http-nio-8080-exec-6] DEBUG com.filestorage.service.UserDetailsServiceImpl - Loading user details for username: userid1
+2026-01-28 16:37:03.235 [http-nio-8080-exec-4] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:37:03.235 [http-nio-8080-exec-6] DEBUG com.filestorage.service.UserDetailsServiceImpl - User details loaded successfully for: userid1
+2026-01-28 16:37:03.235 [http-nio-8080-exec-4] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:37:03.235 [http-nio-8080-exec-6] DEBUG com.filestorage.security.JwtAuthenticationFilter - User userid1 authenticated successfully via JWT
+2026-01-28 16:37:03.236 [http-nio-8080-exec-4] DEBUG com.filestorage.controller.FileController - Fetching files for user: userid1 in folder: null
+2026-01-28 16:37:03.236 [http-nio-8080-exec-6] DEBUG com.filestorage.controller.FolderController - Fetching folders for user: userid1 in parent folder: null
+2026-01-28 16:37:03.238 [http-nio-8080-exec-4] DEBUG com.filestorage.service.FileStorageService - Fetching files for user ID: 1 in folder ID: null
+2026-01-28 16:37:03.238 [http-nio-8080-exec-6] DEBUG com.filestorage.service.FolderService - Fetching folders for user ID: 1 with parent folder ID: null
+2026-01-28 16:37:03.241 [http-nio-8080-exec-6] DEBUG com.filestorage.service.FolderService - Found 1 folders for user ID: 1
+2026-01-28 16:37:03.241 [http-nio-8080-exec-4] DEBUG com.filestorage.service.FileStorageService - Found 2 files for user ID: 1
+2026-01-28 16:37:03.241 [http-nio-8080-exec-6] DEBUG com.filestorage.controller.FolderController - Retrieved 1 folders for user: userid1
+2026-01-28 16:37:03.241 [http-nio-8080-exec-4] DEBUG com.filestorage.controller.FileController - Retrieved 2 files for user: userid1

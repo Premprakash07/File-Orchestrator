@@ -1,0 +1,117 @@
+{
+  "common": {
+    "cancel": "Cancel",
+    "ok": "OK",
+    "delete": "Delete",
+    "create": "Create",
+    "save": "Save",
+    "home": "Home",
+    "logout": "Logout"
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "username": "Username",
+      "password": "Password",
+      "usernamePlaceholder": "Enter username",
+      "passwordPlaceholder": "Enter password",
+      "loginButton": "Login",
+      "signupLink": "Don't have an account? Sign up",
+      "usernameRequired": "Username is required",
+      "passwordRequired": "Password is required",
+      "invalidCredentials": "Invalid username or password"
+    },
+    "signup": {
+      "title": "Sign Up",
+      "username": "Username",
+      "email": "Email",
+      "password": "Password",
+      "usernamePlaceholder": "Enter username",
+      "emailPlaceholder": "Enter email",
+      "passwordPlaceholder": "Enter password",
+      "signupButton": "Sign Up",
+      "loginLink": "Already have an account? Login",
+      "usernameValidation": "Username must be between 3 and 20 characters",
+      "emailValidation": "Please enter a valid email",
+      "passwordValidation": "Password must be at least 6 characters",
+      "successMessage": "Registration successful! Redirecting to login...",
+      "errorMessage": "Registration failed"
+    }
+  },
+  "fileManager": {
+    "title": "File Storage",
+    "myFiles": "My Files",
+    "currentFolderContents": "Current Folder Contents",
+    "newFolder": "New Folder",
+    "uploadFile": "Upload File",
+    "folderNamePlaceholder": "Folder name",
+    "emptyState": "No files or folders. Upload a file or create a folder to get started.",
+    "listView": "List view",
+    "galleryView": "Gallery view",
+    "messages": {
+      "folderCreated": "Folder created successfully",
+      "folderCreateFailed": "Failed to create folder",
+      "fileUploaded": "File uploaded successfully",
+      "fileUploadFailed": "Failed to upload file",
+      "fileDownloadFailed": "Failed to download file",
+      "folderDownloadFailed": "Failed to download folder",
+      "fileDeleted": "File deleted successfully",
+      "fileDeleteFailed": "Failed to delete file",
+      "folderDeleted": "Folder deleted successfully",
+      "folderDeleteFailed": "Failed to delete folder"
+    },
+    "modals": {
+      "deleteFile": {
+        "title": "Delete File",
+        "message": "Are you sure you want to delete this file?"
+      },
+      "deleteFolder": {
+        "title": "Delete Folder",
+        "message": "Are you sure you want to delete this folder? All contents will be deleted."
+      },
+      "downloadFile": {
+        "title": "Download File",
+        "message": "Are you sure you want to download this file?"
+      },
+      "downloadFolder": {
+        "title": "Download Folder",
+        "message": "Are you sure you want to download this folder as a ZIP file?"
+      }
+    },
+    "uploadModal": {
+      "title": "Upload File",
+      "fileName": "File Name",
+      "fileSize": "File Size",
+      "fileType": "File Type",
+      "duplicateWarning": "A file with this name and type already exists. Uploading will replace the existing file.",
+      "options": "Upload Options",
+      "aiSummarize": "AI Summarize",
+      "aiSummarizeDesc": "Generate an AI-powered summary of the file content",
+      "extractMetadata": "Extract Metadata",
+      "extractMetadataDesc": "Automatically extract metadata information from the file",
+      "generateThumbnail": "Generate Thumbnail",
+      "generateThumbnailDesc": "Create a thumbnail preview for images and documents",
+      "tags": "Tags",
+      "tagsPlaceholder": "Enter tags separated by commas",
+      "tagsDesc": "Add tags to help organize and search for this file",
+      "upload": "Upload"
+    },
+    "fileSize": {
+      "bytes": "Bytes",
+      "kb": "KB",
+      "mb": "MB",
+      "gb": "GB",
+      "zero": "0 Bytes"
+    },
+    "details": {
+      "name": "Name",
+      "type": "Type",
+      "size": "Size",
+      "uploaded": "Uploaded",
+      "folder": "Folder",
+      "file": "File",
+      "download": "Download",
+      "noSelection": "No item selected"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+<div class="modal-overlay" *ngIf="isVisible" (click)="close()">
+    <div class="modal-content upload-modal" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+            <h3>{{ 'fileManager.uploadModal.title' | translate }}</h3>
+            <button class="close-btn" (click)="close()">&times;</button>
+        </div>
+
+        <div class="modal-body">
+            <div class="duplicate-warning" *ngIf="isDuplicate">
+                <span class="material-symbols-outlined warning-icon">warning</span>
+                <p>{{ 'fileManager.uploadModal.duplicateWarning' | translate }}</p>
+            </div>
+
+            <div class="file-info" *ngIf="selectedFile">
+                <div class="file-icon-large">
+                    <span class="file-extension">{{ getFileExtension() }}</span>
+                </div>
+
+                <div class="file-details">
+                    <div class="detail-row">
+                        <span class="detail-label">{{ 'fileManager.uploadModal.fileName' | translate }}:</span>
+                        <span class="detail-value">{{ selectedFile.name }}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">{{ 'fileManager.uploadModal.fileSize' | translate }}:</span>
+                        <span class="detail-value">{{ formatFileSize(selectedFile.size) }}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">{{ 'fileManager.uploadModal.fileType' | translate }}:</span>
+                        <span class="detail-value">{{ selectedFile.type || 'Unknown' }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="upload-options">
+                <h4>{{ 'fileManager.uploadModal.options' | translate }}</h4>
+
+                <div class="option-item">
+                    <label>
+                        <input type="checkbox" [(ngModel)]="aiSummarize" />
+                        <span>{{ 'fileManager.uploadModal.aiSummarize' | translate }}</span>
+                    </label>
+                    <p class="option-description">{{ 'fileManager.uploadModal.aiSummarizeDesc' | translate }}</p>
+                </div>
+
+                <div class="option-item">
+                    <label>
+                        <input type="checkbox" [(ngModel)]="extractMetadata" />
+                        <span>{{ 'fileManager.uploadModal.extractMetadata' | translate }}</span>
+                    </label>
+                    <p class="option-description">{{ 'fileManager.uploadModal.extractMetadataDesc' | translate }}</p>
+                </div>
+
+                <div class="option-item">
+                    <label>
+                        <input type="checkbox" [(ngModel)]="generateThumbnail" />
+                        <span>{{ 'fileManager.uploadModal.generateThumbnail' | translate }}</span>
+                    </label>
+                    <p class="option-description">{{ 'fileManager.uploadModal.generateThumbnailDesc' | translate }}</p>
+                </div>
+
+                <div class="option-item tags-input">
+                    <label>{{ 'fileManager.uploadModal.tags' | translate }}</label>
+                    <input type="text" [(ngModel)]="tags"
+                        [placeholder]="'fileManager.uploadModal.tagsPlaceholder' | translate" class="form-control" />
+                    <p class="option-description">{{ 'fileManager.uploadModal.tagsDesc' | translate }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn-cancel" (click)="close()">
+                {{ 'common.cancel' | translate }}
+            </button>
+            <button class="btn-confirm btn-confirm-primary" (click)="confirmUpload()">
+                {{ 'fileManager.uploadModal.upload' | translate }}
+            </button>
+        </div>
+    </div>
+</div>

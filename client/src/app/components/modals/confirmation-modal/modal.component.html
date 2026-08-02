@@ -1,0 +1,23 @@
+<div class="modal-overlay" *ngIf="isVisible" (click)="close()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+            <h3>{{ config.title }}</h3>
+            <button class="close-btn" (click)="close()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p style="white-space: pre-line;">{{ config.message }}</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-cancel" *ngIf="config.type === 'confirm'" (click)="cancel()">
+                {{ config.cancelText }}
+            </button>
+            <button class="btn-confirm" [ngClass]="{
+                    'btn-confirm-primary': config.buttonAction === 'primary',
+                    'btn-confirm-danger': config.buttonAction === 'danger',
+                    'btn-confirm-warning': config.buttonAction === 'warning'
+                }" (click)="confirm()">
+                {{ config.confirmText }}
+            </button>
+        </div>
+    </div>
+</div>

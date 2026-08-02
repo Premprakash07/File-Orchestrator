@@ -1,0 +1,173 @@
+<app-header [username]="currentUser?.username" (logoutClick)="logout()"></app-header>
+
+<div class="container">
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <span (click)="navigateToRoot()">{{ 'common.home' | translate }}</span>
+        <span *ngFor="let folder of folderPath">
+            / <span (click)="navigateToFolder(folder)">{{ folder.name }}</span>
+        </span>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="mb-20 action-bar">
+        <div>
+            <button class="btn-secondary" (click)="showCreateFolderInput = !showCreateFolderInput">
+                <span class="material-symbols-outlined">create_new_folder</span>
+                {{ 'fileManager.newFolder' | translate }}
+            </button>
+            <button class="btn-secondary" (click)="fileInput.click()">
+                <span class="material-symbols-outlined">upload</span>
+                {{ 'fileManager.uploadFile' | translate }}
+            </button>
+            <input #fileInput type="file" (change)="onFileSelected($event)" class="file-input-hidden" />
+        </div>
+        <div class="view-toggle">
+            <button [class.active]="viewMode === 'list'" (click)="toggleViewMode('list')"
+                [title]="'fileManager.listView' | translate">
+                <span class="material-symbols-outlined">list</span>
+            </button>
+            <button [class.active]="viewMode === 'gallery'" (click)="toggleViewMode('gallery')"
+                [title]="'fileManager.galleryView' | translate">
+                <span class="material-symbols-outlined">grid_view</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Create Folder Input -->
+    <div *ngIf="showCreateFolderInput" class="form-group mb-20">
+        <input type="text" [placeholder]="'fileManager.folderNamePlaceholder' | translate" [(ngModel)]="newFolderName"
+            [ngModelOptions]="{ standalone: true }" (keyup.enter)="createFolder()" />
+        <button class="btn-primary folder-form-button" (click)="createFolder()">
+            {{ 'common.create' | translate }}
+        </button>
+        <button class="btn-danger folder-form-cancel" (click)="showCreateFolderInput = false; newFolderName = ''">
+            {{ 'common.cancel' | translate }}
+        </button>
+    </div>
+
+    <div *ngIf="message" [class]="messageType === 'success' ? 'success' : 'error'">
+        {{ message }}
+    </div>
+
+    <!-- Main Content Area with Sidebar -->
+    <div class="content-with-sidebar">
+        <!-- List View -->
+        <div *ngIf="viewMode === 'list'" class="item-list">
+            <h3>{{ currentFolderId ? ('fileManager.currentFolderContents' | translate) : ('fileManager.myFiles' |
+                translate) }}</h3>
+
+            <!-- Folders -->
+            <div *ngFor="let folder of folders" class="item" [class.selected]="isSelected('folder', folder.id)"
+                (click)="selectItem('folder', folder)" (dblclick)="navigateToFolder(folder)">
+                <div class="item-info">
+                    <span class="folder-icon"></span>
+                    <span>{{ folder.name }}</span>
+                </div>
+            </div>
+
+            <!-- Files -->
+            <div *ngFor="let file of files" class="item" [class.selected]="isSelected('file', file.id)"
+                (click)="selectItem('file', file)">
+                <div class="item-info">
+                    <span class="file-icon"></span>
+                    <div>
+                        <div>{{ file.fileName }}</div>
+                        <small class="file-size">{{formatFileSize(file.fileSize)}}</small>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="folders.length === 0 && files.length === 0" class="empty-state">
+                {{ 'fileManager.emptyState' | translate }}
+            </div>
+        </div>
+
+        <!-- Gallery View -->
+        <div *ngIf="viewMode === 'gallery'" class="gallery-view">
+            <h3>{{ currentFolderId ? ('fileManager.currentFolderContents' | translate) : ('fileManager.myFiles' |
+                translate) }}</h3>
+
+            <div class="gallery-grid">
+                <!-- Folders -->
+                <div *ngFor="let folder of folders" class="gallery-item folder-item"
+                    [class.selected]="isSelected('folder', folder.id)" (click)="selectItem('folder', folder)"
+                    (dblclick)="navigateToFolder(folder)">
+                    <div class="gallery-icon">📁</div>
+                    <div class="gallery-name">{{ folder.name }}</div>
+                </div>
+
+                <!-- Files -->
+                <div *ngFor="let file of files" class="gallery-item file-item"
+                    [class.selected]="isSelected('file', file.id)" (click)="selectItem('file', file)">
+                    <div class="gallery-icon">📄</div>
+                    <div class="gallery-name" [title]="file.fileName">{{ file.fileName }}</div>
+                    <div class="gallery-size">{{ formatFileSize(file.fileSize) }}</div>
+                </div>
+            </div>
+
+            <div *ngIf="folders.length === 0 && files.length === 0" class="empty-state">
+                {{ 'fileManager.emptyState' | translate }}
+            </div>
+        </div>
+
+        <!-- Properties Sidebar -->
+        <aside class="properties-sidebar" *ngIf="selectedItem">
+            <h3>{{ 'fileManager.details.name' | translate }}</h3>
+
+            <div class="sidebar-actions">
+                <button class="btn-secondary" *ngIf="selectedItem.type === 'file' && getFileData()"
+                    (click)="downloadFile(getFileData()!.id, getFileData()!.fileName)"
+                    [title]="'fileManager.details.download' | translate">
+                    <span class="material-symbols-outlined">download</span>
+                </button>
+                <button class="btn-secondary" *ngIf="selectedItem.type === 'folder' && getFolderData()"
+                    (click)="downloadFolder(getFolderData()!.id, getFolderData()!.name)"
+                    [title]="'fileManager.details.download' | translate">
+                    <span class="material-symbols-outlined">download</span>
+                </button>
+                <button class="btn-danger" *ngIf="selectedItem.type === 'folder' && getFolderData()"
+                    (click)="deleteFolder(getFolderData()!.id)"
+                    [title]="'fileManager.modals.deleteFolder.title' | translate">
+                    <span class="material-symbols-outlined">delete</span>
+                </button>
+                <button class="btn-danger" *ngIf="selectedItem.type === 'file' && getFileData()"
+                    (click)="deleteFile(getFileData()!.id)" [title]="'fileManager.modals.deleteFile.title' | translate">
+                    <span class="material-symbols-outlined">delete</span>
+                </button>
+            </div>
+
+            <div class="property-section">
+                <div class="property-icon">
+                    {{ selectedItem.type === 'folder' ? '📁' : '📄' }}
+                </div>
+
+                <div class="property-row">
+                    <span class="property-label">{{ 'fileManager.details.type' | translate }}:</span>
+                    <span class="property-value">{{ selectedItem.type === 'folder' ? ('fileManager.details.folder' |
+                        translate) : getFileData()?.fileType }}</span>
+                </div>
+
+                <div class="property-row">
+                    <span class="property-label">{{ 'fileManager.details.name' | translate }}:</span>
+                    <span class="property-value">{{ selectedItem.type === 'folder' ? getFolderData()?.name :
+                        getFileData()?.fileName }}</span>
+                </div>
+
+                <div class="property-row" *ngIf="selectedItem.type === 'file' && getFileData()">
+                    <span class="property-label">{{ 'fileManager.details.size' | translate }}:</span>
+                    <span class="property-value">{{ formatFileSize(getFileData()!.fileSize) }}</span>
+                </div>
+
+                <div class="property-row">
+                    <span class="property-label">{{ 'fileManager.details.uploaded' | translate }}:</span>
+                    <span class="property-value">{{ selectedItem.type === 'folder' ?
+                        formatDate(getFolderData()!.createdAt) : formatDate(getFileData()!.uploadedAt) }}</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<app-file-upload-modal [existingFiles]="files" (upload)="handleFileUpload($event)" (cancel)="loadContent()">
+</app-file-upload-modal>

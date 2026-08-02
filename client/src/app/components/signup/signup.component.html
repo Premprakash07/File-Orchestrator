@@ -1,0 +1,52 @@
+<div class="form-container">
+    <h2 class="text-center mb-20">{{ 'auth.signup.title' | translate }}</h2>
+
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+    <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="username">{{ 'auth.signup.username' | translate }}</label>
+            <input type="text" id="username" formControlName="username"
+                [placeholder]="'auth.signup.usernamePlaceholder' | translate" />
+            <div class="error" *ngIf="
+          signupForm.get('username')?.invalid &&
+          signupForm.get('username')?.touched
+        ">
+                {{ 'auth.signup.usernameValidation' | translate }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">{{ 'auth.signup.email' | translate }}</label>
+            <input type="email" id="email" formControlName="email"
+                [placeholder]="'auth.signup.emailPlaceholder' | translate" />
+            <div class="error" *ngIf="
+          signupForm.get('email')?.invalid &&
+          signupForm.get('email')?.touched
+        ">
+                {{ 'auth.signup.emailValidation' | translate }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">{{ 'auth.signup.password' | translate }}</label>
+            <input type="password" id="password" formControlName="password"
+                [placeholder]="'auth.signup.passwordPlaceholder' | translate" />
+            <div class="error" *ngIf="
+          signupForm.get('password')?.invalid &&
+          signupForm.get('password')?.touched
+        ">
+                {{ 'auth.signup.passwordValidation' | translate }}
+            </div>
+        </div>
+
+        <button type="submit" class="btn-primary" [disabled]="signupForm.invalid">
+            {{ 'auth.signup.signupButton' | translate }}
+        </button>
+
+        <button type="button" class="btn-link" (click)="goToLogin()">
+            {{ 'auth.signup.loginLink' | translate }}
+        </button>
+    </form>
+</div>

@@ -1,0 +1,1 @@
+2026-01-28 16:35:17.588 [http-nio-8080-exec-2] ERROR com.filestorage.security.JwtTokenProvider - Invalid JWT token: Token expired
