@@ -44,8 +44,8 @@ public class FileStorageService {
     @Autowired
     private S3Service s3Service;
 
-    // @Autowired
-    // private FileUploadEventProducer fileUploadEventProducer;
+     @Autowired
+     private FileUploadEventProducer fileUploadEventProducer;
 
     public FileDTO storeFile(MultipartFile file, User user, Long folderId) throws IOException {
         logger.debug("Storing file: {} for user ID: {} in folder ID: {}", file.getOriginalFilename(), user.getId(),
@@ -80,7 +80,7 @@ public class FileStorageService {
         fileMetadata = fileMetadataRepository.save(fileMetadata);
         logger.info("File stored successfully: {} with metadata ID: {}", originalFilename, fileMetadata.getId());
 
-        // fileUploadEventProducer.publishUploadCompleted(fileMetadata);
+         fileUploadEventProducer.publishUploadCompleted(fileMetadata);
 
         return convertToDTO(fileMetadata);
     }

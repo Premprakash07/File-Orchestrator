@@ -65,6 +65,12 @@
             <artifactId>spring-kafka</artifactId>
         </dependency>
         
+        <!-- Jackson DataType JSR310 for LocalDateTime support -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
+        
         <!-- Spring Boot Validation -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
